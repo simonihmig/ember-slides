@@ -1,0 +1,30 @@
+
+
+.fragment.current-visible.visible:not(.current-fragment) {
+  display: none;
+  height:0px;
+  line-height: 0px;
+  font-size: 0px;
+}
+
+.reveal {
+
+  code.bash {
+    &:before {
+      content: '> ';
+      color: $secondaryColor;
+    }
+
+    strong {
+      color: $primaryColor;
+    }
+  }
+
+  pre code,
+  .pre code {
+    padding: 20px;
+  }
+
+}
+
+

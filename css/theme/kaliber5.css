@@ -24,6 +24,11 @@ body {
   background: #f8b9a7;
   text-shadow: none; }
 
+::-moz-selection {
+  color: #fff;
+  background: #f8b9a7;
+  text-shadow: none; }
+
 .reveal .slides > section,
 .reveal .slides > section > section {
   line-height: 1.3;
@@ -137,7 +142,8 @@ body {
 .reveal q {
   font-style: italic; }
 
-.reveal pre {
+.reveal pre,
+.reveal .pre {
   display: block;
   position: relative;
   width: 90%;
@@ -296,8 +302,12 @@ body:after {
   top: 20px;
   left: 20px;
   background: url(../../img/k5logo@2x.png) no-repeat;
-  background-size: 200px 62px;
+  background-size: contain;
   z-index: 1; }
+  @media (max-width: 767px) {
+    body:after {
+      width: 100px;
+      height: 31px; } }
 
 .hljs {
   display: block;
@@ -410,3 +420,20 @@ body:after {
   .reveal .id-card a {
     color: #54514F;
     border-bottom: dashed 1px #54514F; }
+
+.fragment.current-visible.visible:not(.current-fragment) {
+  display: none;
+  height: 0px;
+  line-height: 0px;
+  font-size: 0px; }
+
+.reveal code.bash:before {
+  content: '> ';
+  color: #7bba1d; }
+
+.reveal code.bash strong {
+  color: #ef5a31; }
+
+.reveal pre code,
+.reveal .pre code {
+  padding: 20px; }
