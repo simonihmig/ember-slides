@@ -53,113 +53,33 @@
 
 				<section data-markdown>
           <script type="text/template">
-            * What is Ember
 
-            * How is it different
-              * Full featured Framework, not just the V in MVC/MVVM/MVWTF
-                * components, controllers, helpers, services, router, data-layer, DI, build chain, testing, deployment, addons
-              * Conventions over configuration
-                * where to put things
-                *
-              * shared solutions
-                * build chain
-                * test setup
-                * deployment
-                * don't reinvent the wheel, use shared and proven solutions for already solved problems (the boring ones)
-                * focus on adding real value to your app
-              * built for ambitious applications
-                * not for "sprinkles of richness", but fullblown SPA
-                * for ambitious apps
-                * chart: high learning curve vs. long lasting productivity and scalability
-                * don't judge a framework by the early stages (Hello World/ToDoMVC), but how it performs in the long run
-            * Ember-CLI
-              * first and still most advanced CLI of any frameworks
-                * ngCli uses it
-                * create-react-app inspired by it
-              * setup new app / addon
-              * ember generate
-              * ember build
-                * module loader + bundling
-                * ES201x transpilation (Babel)
-                * template compilation (no runtime parsing)
-                * optional CSS preprocessing
-              * ember serve
-                * dev server
-                * fast incremental builds
-                * live reload / CSS hot reloading
-							* ember test
-								* unit, integration, acceptance tests
-								* test helpers, async
-								* linting
-            * Addons
-						  * plug into ember by using addon API and conventional structure of Ember, zero configuration
-							* use cases:
-								* add things app can consume at runtime, like components, services, mixins, helpers etc.
-						    * hook into ember-cli
-									* add to build chain
-									* testing
-									* commands
-							* emberobserver.com lists and rates addons, > 2.600 listed
-							* examples:
-								* UI
-									* ember-bootstrap
-									* ember-paper (Material Design)
-									* ember-leaflet
-								* CSS preprocessors
-									* ember-cli-sass
-									* ember-cli-less
-									* ember-cli-postcss
-								* testing
-									* ember-cli-mocha
-									* ember-cli-page-object
-									* ember-cli-code-coverage
-							* addon addons
-								* addons that are extensible by sub-addons
-								* ember-data
-									* generic REST and json:api built-in
-									* ember-local-storage
-									* ember-pouch
-									* ember-graphql-adapter
-									* ember-localforage-adapter
-									* emberfire (Firebase)
-								* ember-cli-deploy
-									* pluggable deployment pipeline, > 100 deploy plugins
-									* ember-cli-deploy-s3
-									* ember-cli-deploy-cloudfront
-									* ember-cli-deploy-azure
-									* ember-cli-deploy-rsync
-									* ember-cli-deploy-scp
-									* ember-cli-deploy-ssh
-									* ember-cli-deploy-docker
-									* ember-cli-deploy-gcloud
-									* ember-cli-deploy-firebase
-								* ember-service-worker
-									* ember-service-worker-index
-									* ember-service-worker-asset-cache
-									* ember-service-worker-cache-first
-									* ember-service-worker-cache-fallback
-							* ember-cli-mirage ???
-            * Community
-              * Project owned by Community, Core Team depends on it
-              * Stability without Stagnation
-                * Apps have to be maintainable, not break things
-                * Easy upgrade path
-                * SemVer, just 1 major bump
-                * that bump was zero effort, removing deprecations
-                * 3x new rendering engine replaced under the hood, zero effort
-              * Open to community:
-                * RFC process
-                * public core team meeting notes
-                * core team members reachable, attend confs + meetups
-            * Rundown
-              * try it -> npm i -g ember-cli
-              * meetup
+
+
+							* ember-cli-fastboot
+                * complete solution for SSR
+                * not just rendering components in node as strings
+                * not just "it supports it, go create your server app"
+                * instead "everything is already there, it just works"
+                * building blocks
+                  * waiting for external data (API) works through ember routers builtin async support
+                  * ember-data is isomorphic, uses Ajax in browser, node.js HTTP client in FastBoot
+                  * fastboot: core library to load and run your ember app, visit route and render
+                  * ember-cli-fastboot: addon to build server app + dev server. `ember fastboot`
+                  * fastboot-app-server: production-ready, clustered ExpressJS server
+                * deployment included:
+                  * Heroku
+                  * ember-cli-deploy-elastic-beanstalk
+                  * ember-cli-deploy-fastboot-lambda
+                  * Docker
 
           </script>
 				</section>
 
 				<section data-markdown>
 					<script type="text/template">
+
+					  # headline
 
 					</script>
 				</section>
@@ -169,9 +89,209 @@
 
           <section data-markdown>
             <script type="text/template">
+              ## What is ember
+
+              *A framework for creating **ambitious** web applications.*
+
+              *Don't waste time making trivial choices. Ember.js incorporates common idioms so you can focus on what makes your app special, not reinventing the wheel.*
+
+              *Ember.js is built for productivity. Designed with developer ergonomics in mind, its friendly APIs help you get your job done—fast.*
+
+					  </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## For ambitious apps
+
+              * full featured framework
+              * not just the V in M**V**C/M**V**VM/M**V**\*
+              * not for "sprinkles of richness", but fullblown SPA
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+
+              TODO Chart
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Conventions over configuration
+
+              No manual wiring/configuration through conventions:
+
+              * app structure: app files, styles, static assets
+              * resolver finds modules based on naming conventions
+              * DI container
+              * (nested) routes have index, loading, error subroutes
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Shared solutions
+
+              * build chain
+              * test setup
+              * deployment
+              * addons
+              * don't reinvent the wheel, use shared and proven solutions for already solved problems
+              * focus on adding real value to your app
+
+              Note:
+              the boring solved problems
+
+            </script>
+          </section>
+
+        </section>
+
+
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
+              # Ember CLI
+
+              * first class citizen of Ember.js
+              * primary way to develop, build, test and ship Ember apps
+              * pluggable "framework"
+              * enables addon ecosystem
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## But what about Angular CLI?
+              ![ngCLI](img/ngCLI.png)
+					  </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## and what about create-react-app?
+              ![abramov tweet](img/abramov.png)
+
+              Note:
+              Ember CLI still most advanced, testing + addons
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Create a new app
+
+              ```sh
+              ember new <app-name>
+              ```
+
+              Note:
+              conventional app structure
+
+            </script>
+          </section>
+
+          <section>
+            <h2>Generators</h2>
+
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>component</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>controller</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>route</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>helper</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>mixin</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember generate <strong>initializer</strong></code></div>
+            <div class="pre fragment"><code class="lang-sh hljs bash">ember generate <strong>service</strong></code></div>
+
+            <div class="fragment">Always included: default test boilerplate</div>
+          </section>
+
+          <section>
+            <h2>Build</h2>
+
+            <div class="fragment current-visible">
+              <pre><code class="lang-sh hljs bash">ember build</code></pre>
+
+              <ul>
+                <li>module bundling (ES6 modules)</li>
+                <li>template compilation</li>
+                <li>ES201x transpilation (Babel)</li>
+                <li>Sourcemaps</li>
+                <li>additional functionality through addons</li>
+                <li>output: deployable <code>dist</code> folder</li>
+              </ul>
+
+              <aside class="notes">
+                additional functionality through addons <br>
+                even default build functionality by default addons
+              </aside>
+            </div>
+
+            <div class="fragment current-visible">
+              <div class="pre"><code class="lang-sh hljs bash">ember build <strong>--prod</strong></code></div>
+
+              <ul>
+                <li>Uglify/minify JS + CSS</li>
+                <li>Asset fingerprinting</li>
+              </ul>
+
+              <aside class="notes">
+                adds md5 checksum, replaces all references
+              </aside>
+            </div>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Serve
+
+              ```sh
+              ember serve
+              ```
+
+              * local HTTP server
+              * watches files, fast incremental builds
+              * live reload / CSS hot reloading
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Test
+
+              ```sh
+              ember test
+              ```
+
+              * unit, integration, acceptance tests
+              * async test helpers like `visit`, `click`, `fillIn` etc.
+              * linting
+
+              Note:
+              async test helpers abstract away async processes to make testing easy
+              linting every JS file by default, additional CSS / template linting through addons
+
+            </script>
+          </section>
+
+        </section>
+
+
+
+        <section>
+
+          <section data-markdown>
+            <script type="text/template">
               # Addons
 
-              * plugins for EmberCLI
+              * plugins for Ember CLI
               * make use of addon API
               * and conventional structure of Ember apps
 
@@ -185,7 +305,8 @@
               * augment the consuming runtime app
               * add features to build chain
               * add to testing setup
-              * add new EmberCLI commands
+              * add new commands
+              * add new generators
 
             </script>
           </section>
@@ -253,11 +374,17 @@
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-postcss</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-autoprefixer</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-css-modules</strong></code></div>
+
+            <aside class="notes">
+              zero conf, just works. watching, hot reloading
+            </aside>
+
           </section>
 
           <section>
             <h2>Testing</h2>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-mocha</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-eslint</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-page-object</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-code-coverage</strong></code></div>
           </section>
@@ -299,10 +426,105 @@
 
         </section>
 
+        <section>
 
+          <section data-markdown>
+            <script type="text/template">
+              # Community
+
+              * Ember is a true community project
+              * not owned by a single company
+              * public participation through RFC proccess
+              * very active, supportive community
+
+              Note:
+              * public core team meetings
+              * core team members approachable
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Stability without Stagnation
+
+              Focuses on maintainable apps with a long life cycle:
+
+              * easy upgrade path, deprecation policy
+              * SemVer, just 1 major bump
+              * that bump was zero effort, removing deprecations
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Stability without Stagnation
+
+              * still frequent (6w sprints) releases
+              * has undergone major non-breaking transformations
+              * unidirectional data flow (*Data down, Actions up*)
+              * rendering engine replaced thrice under the hood, zero effort
+
+            </script>
+          </section>
+
+        </section>
 
 				<section>
-					<h1>Thank you</h1>
+
+          <section data-markdown>
+            <script type="text/template">
+              # Give it a try
+
+              ```sh
+              npm install -g ember-cli
+              ember new my-app
+              ```
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Meetup
+
+              **EmberHH**
+
+              http://www.meetup.com/de-DE/emberHH/
+
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              # Thanks!
+            </script>
+          </section>
+
+          <section>
+
+            <div class="id-card">
+              <img src="https://pbs.twimg.com/profile_images/503937168855691265/SjLlgV06.jpeg" alt="">
+
+              <dl>
+                <dt>Name</dt>
+                <dd>Simon Ihmig</dd>
+                <dt>Company</dt>
+                <dd><a href="http://www.kaliber5.de">kaliber5</a></dd>
+                <dt>Job title</dt>
+                <dd>Co-Founder, Web Developer, CTO</dd>
+                <dt>Email</dt>
+                <dd><a href="mailto:ihmig@kaliber5.de">ihmig@kaliber5.de</a></dd>
+                <dt>Twitter</dt>
+                <dd><a href="https://twitter.com/simonihmig">@simonihmig</a></dd>
+                <dt>Github</dt>
+                <dd><a href="https://github.com/simonihmig">@simonihmig</a></dd>
+              </dl>
+            </div>
+
+          </section>
+
+
 				</section>
 			</div>
 		</div>
