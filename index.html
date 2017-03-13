@@ -25,8 +25,9 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Headline</h1>
-					<h2>Subline</h2>
+					<h1>Stop JavaScript fatigue</h1>
+					<h2>Start getting things done</h2>
+					<h1>With Ember.js</h1>
 				</section>
 				<section>
 
@@ -51,45 +52,74 @@
 
 				</section>
 
-				<section data-markdown>
-          <script type="text/template">
+        <section>
 
+          <section>
+            <h1>JavaScript fatigue</h1>
+          </section>
 
+          <section class="cloud" data-markdown>
+            <script type="text/template">
+              ## Modern Frontend JS
 
-							* ember-cli-fastboot
-                * complete solution for SSR
-                * not just rendering components in node as strings
-                * not just "it supports it, go create your server app"
-                * instead "everything is already there, it just works"
-                * building blocks
-                  * waiting for external data (API) works through ember routers builtin async support
-                  * ember-data is isomorphic, uses Ajax in browser, node.js HTTP client in FastBoot
-                  * fastboot: core library to load and run your ember app, visit route and render
-                  * ember-cli-fastboot: addon to build server app + dev server. `ember fastboot`
-                  * fastboot-app-server: production-ready, clustered ExpressJS server
-                * deployment included:
-                  * Heroku
-                  * ember-cli-deploy-elastic-beanstalk
-                  * ember-cli-deploy-fastboot-lambda
-                  * Docker
+              * Autoprefixer
+              * Gulp
+              * Karma
+              * Angular
+              * Ember
+              * Compass
+              * Mocha
+              * TypeScript
+              * Polymer
+              * JSHint
+              * AVA
+              * Flow
+              * Rollup
+              * QUnit
+              * Babel
+              * Redux
+              * Jasmine
+              * RxJS
+              * Knockout
+              * Vue
+              * UglifyJS
+              * Broccoli
+              * Aurelia
+              * npm
+              * bower
+              * Backbone
+              * Sinon
+              * AMD
+              * Chai
+              * PostCSS
+              * Less
+              * ESLint
+              * Browserify
+              * require.js
+              * Grunt
+              * yarn
+              * Webpack
+              * ES6
+              * React
+              * CJS
+              * SystemJS
+              * Sass
+              * Jest
 
-          </script>
-				</section>
+            </script>
+          </section>
 
-				<section data-markdown>
-					<script type="text/template">
+          <section>
+            <img src="img/react-boilerplate.png" alt="">
+          </section>
 
-					  # headline
-
-					</script>
-				</section>
-
+        </section>
 
         <section>
 
           <section data-markdown>
             <script type="text/template">
-              ## What is ember
+              ## What is Ember
 
               *A framework for creating **ambitious** web applications.*
 
@@ -427,6 +457,69 @@
         </section>
 
         <section>
+
+          <section data-markdown>
+            <script type="text/template">
+              # An example: SSR
+
+              * Server side rendering
+              * SEO
+              * Time to first paint
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## SSR is hard
+
+              * no DOM & browser APIs
+              * needs isomorphic JS:
+                * XHR vs. `http.request()`
+                * `history.pushState()` vs. HTTP 30x
+              * async data loading, no rerender
+            </script>
+          </section>
+
+          <section>
+            <h2>SSR with React/ReactRouter/Redux</h2>
+            <p><q>We support this. We have some APIs. Now go write your server app</q></p>
+          </section>
+
+          <section>
+            <h2>SSR with Ember</h2>
+            <p><q>We support this. We hare ready to use solutions. Just install them</q></p>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## FastBoot
+
+              * Ember's router builtin async support
+              * isomorphic ember-data: uses XHR or HTTP client in FastBoot
+              * fastboot: core library to load/run your ember app, visit route and render
+              * ember-cli-fastboot: addon to build server app + dev server. `ember fastboot`
+              * fastboot-app-server: production-grade, clustered ExpressJS server
+            </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## Deploy to production
+
+              * ember-cli-deploy-elastic-beanstalk
+              * ember-cli-deploy-fastboot-lambda
+              * Heroku
+              * Docker
+            </script>
+          </section>
+
+        </section>
+
+        <section>
+
+          <section>
+            <h1>Community</h1>
+          </section>
 
           <section data-markdown>
             <script type="text/template">
