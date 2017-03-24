@@ -130,35 +130,23 @@
 					  </script>
           </section>
 
-          <section data-markdown>
-            <script type="text/template">
-              ## For ambitious apps
+          <!--<section data-markdown>-->
+            <!--<script type="text/template">-->
+              <!--## For ambitious apps-->
 
-              * full featured framework
-              * not just the V in M**V**C/M**V**VM/M**V**\*
-              * not for "sprinkles of richness", but fullblown SPA
+              <!--* full featured framework-->
+              <!--* not just the V in M**V**C/M**V**VM/M**V**\*-->
+              <!--* not for "sprinkles of richness", but fullblown SPA-->
 
-            </script>
-          </section>
-
-          <section data-markdown>
-            <script type="text/template">
-
-              TODO Chart
-
-            </script>
-          </section>
+            <!--</script>-->
+          <!--</section>-->
 
           <section data-markdown>
             <script type="text/template">
               ## Conventions over configuration
 
-              No manual wiring/configuration through conventions:
-
               * app structure: app files, styles, static assets
               * resolver finds modules based on naming conventions
-              * DI container
-              * (nested) routes have index, loading, error subroutes
 
             </script>
           </section>
@@ -254,7 +242,6 @@
                 <li>ES201x transpilation (Babel)</li>
                 <li>Sourcemaps</li>
                 <li>additional functionality through addons</li>
-                <li>output: deployable <code>dist</code> folder</li>
               </ul>
 
               <aside class="notes">
@@ -300,20 +287,15 @@
               ember test
               ```
 
-              * unit, integration, acceptance tests
-              * async test helpers like `visit`, `click`, `fillIn` etc.
+              * unit,
+              * integration
+              * acceptance tests
               * linting
-
-              Note:
-              async test helpers abstract away async processes to make testing easy
-              linting every JS file by default, additional CSS / template linting through addons
 
             </script>
           </section>
 
         </section>
-
-
 
         <section>
 
@@ -337,19 +319,6 @@
               * add to testing setup
               * add new commands
               * add new generators
-
-            </script>
-          </section>
-
-          <section data-markdown>
-            <script type="text/template">
-              ## Where to get them
-
-              * published as NPM packages
-              * emberobserver.com lists and rates addons
-              * \> 2.600 listed
-
-              ![emberobserver.com](img/emberobserver.png)
 
             </script>
           </section>
@@ -391,9 +360,9 @@
           <section>
             <h2>ember-data adapters</h2>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-local-storage</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-localforage-adapter</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-pouch</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-graphql-adapter</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-localforage-adapter</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>emberfire</strong></code></div>
           </section>
 
@@ -415,44 +384,45 @@
             <h2>Testing</h2>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-mocha</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-eslint</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-template-lint</strong></code></div>
+            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-stylelint</strong></code></div>
             <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-page-object</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-code-coverage</strong></code></div>
           </section>
 
-          <section data-markdown>
-            <script type="text/template">
-              ## Higher order addons
+          <!--<section data-markdown>-->
+            <!--<script type="text/template">-->
+              <!--## Higher order addons-->
 
-              * pluggable framework for other addons
-              * addon addons provide specific implementations
+              <!--* pluggable framework for other addons-->
+              <!--* addon addons provide specific implementations-->
 
-            </script>
-          </section>
+            <!--</script>-->
+          <!--</section>-->
 
-          <section>
-            <h2>ember-service-worker</h2>
-            <div class="pre fragment"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-index</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-asset-cache</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-cache-first</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-cache-fallback</strong></code></div>
-          </section>
+          <!--<section>-->
+            <!--<h2>ember-service-worker</h2>-->
+            <!--<div class="pre fragment"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-index</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-asset-cache</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-cache-first</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-service-worker-cache-fallback</strong></code></div>-->
+          <!--</section>-->
 
-          <section>
-            <h2>ember-cli-deploy</h2>
-            <div class="pre fragment"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-s3</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-cloudfront</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-azure</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-rsync</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-scp</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-ssh</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-docker</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-gcloud</strong></code></div>
-            <div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-firebase</strong></code></div>
-            <div class="pre fragment"><code class="lang-sh hljs bash">ember <strong>deploy</strong></code></div>
+          <!--<section>-->
+            <!--<h2>ember-cli-deploy</h2>-->
+            <!--<div class="pre fragment"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-s3</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-cloudfront</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-azure</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-rsync</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-scp</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-ssh</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-docker</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-gcloud</strong></code></div>-->
+            <!--<div class="pre fragment current-visible"><code class="lang-sh hljs bash">ember install <strong>ember-cli-deploy-firebase</strong></code></div>-->
+            <!--<div class="pre fragment"><code class="lang-sh hljs bash">ember <strong>deploy</strong></code></div>-->
 
-          </section>
+          <!--</section>-->
 
         </section>
 
@@ -487,17 +457,25 @@
 
           <section>
             <h2>SSR with Ember</h2>
-            <p><q>We support this. We hare ready to use solutions. Just install them</q></p>
+            <p><q>We support this. We have ready to use solutions. Just install them</q></p>
+          </section>
+
+          <section>
+            <p>Let me introduce you to...</p>
+            <h2>FastBoot</h2>
           </section>
 
           <section data-markdown>
             <script type="text/template">
               ## FastBoot
 
-              * Ember's router builtin async support
+              * Ember's router knows to wait for async data
               * isomorphic ember-data: uses XHR or HTTP client in FastBoot
               * fastboot: core library to load/run your ember app, visit route and render
-              * ember-cli-fastboot: addon to build server app + dev server. `ember fastboot`
+              * ember-cli-fastboot: addon to build server app + dev server.
+                ```sh
+                ember fastboot
+                ```
               * fastboot-app-server: production-grade, clustered ExpressJS server
             </script>
           </section>
@@ -518,27 +496,12 @@
         <section>
 
           <section>
-            <h1>Community</h1>
+            <h1>Stability without Stagnation</h1>
           </section>
 
           <section data-markdown>
             <script type="text/template">
-              # Community
-
-              * Ember is a true community project
-              * not owned by a single company
-              * public participation through RFC proccess
-              * very active, supportive community
-
-              Note:
-              * public core team meetings
-              * core team members approachable
-            </script>
-          </section>
-
-          <section data-markdown>
-            <script type="text/template">
-              ## Stability without Stagnation
+              ## Stability
 
               Focuses on maintainable apps with a long life cycle:
 
@@ -551,7 +514,7 @@
 
           <section data-markdown>
             <script type="text/template">
-              ## Stability without Stagnation
+              ## Progress
 
               * still frequent (6w sprints) releases
               * has undergone major non-breaking transformations
@@ -571,6 +534,9 @@
 
               ```sh
               npm install -g ember-cli
+              ```
+
+              ```sh
               ember new my-app
               ```
 
@@ -588,10 +554,12 @@
             </script>
           </section>
 
-          <section data-markdown>
-            <script type="text/template">
-              # Thanks!
-            </script>
+          <section>
+            <h2>Embrace shared solutions!</h2>
+          </section>
+
+          <section>
+            <h1>Thanks!</h1>
           </section>
 
           <section>
