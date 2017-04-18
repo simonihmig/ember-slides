@@ -35,13 +35,15 @@ Modern JS is an incredibly powerful platform for developing applications that ca
 But it has also become much more demanding, you actually need to build JS, so you need a build chain and you need a setup to run tests and so on.
 
 So while my talk is about ember, I am going to focus on what it makes really unique, with it being kind of the Rails of JS frameworks with some
-fundamental principles like conventions over configuration and using shared solutions.
+fundamental principles like conventions over configuration and using shared solutions. Especially its addon ecosystem is quite unique to any other JS framework.
 
 So if you have ever struggled maintaining the build chain for your project or wondered why there have to be literally hundreds and thousands of
-different React boilerplate projects, then Ember has an very different answer for that. By embracing shared solutions to common problems, it
+different React boilerplate projects, then Ember has an answer for that. By embracing shared solutions to common problems, it
 frees us developers from reinventing the wheel all over again and be really productive.
 
-And even if you are not going to drop your favorite JS framework of the day, I still think that other communities can still learn a few things from Ember in these regards.
+
+
+And even if you are not going to drop your favorite JS framework of the day, I think that other communities can still learn a few things from Ember in these regards.
 
 
           -->
@@ -189,6 +191,33 @@ And even if you are not going to drop your favorite JS framework of the day, I s
               the boring solved problems
 
             </script>
+          </section>
+
+          <section data-markdown>
+            <script type="text/template">
+              ## GlimmerJS
+
+              * introduced at EmberConf
+              * lightweight component rendering library
+              * uses Ember's internal Glimmer2 renderer
+              * tiny (~30K) and super fast
+
+            </script>
+          </section>
+
+          <section>
+            <h2>Initial render</h2>
+            <img src="img/realistic-initial.png" alt="">
+          </section>
+
+          <section>
+            <h2>Re-render</h2>
+            <img src="img/realistic-update.png" alt="">
+          </section>
+
+          <section>
+            <h2>Npm install up to Ember</h2>
+            <img src="img/glimmer-ember.png" alt="">
           </section>
 
         </section>
@@ -367,7 +396,6 @@ And even if you are not going to drop your favorite JS framework of the day, I s
               * data
               * build
               * testing
-              * higher order addons
 
             </script>
           </section>
